@@ -2,8 +2,8 @@
   "name": "hellotrello",
   "title": "HelloTrello",
   "id": "jid1-EbwApMCAN1VCJw",
-  "description": "a basic add-on",
-  "author": "",
+  "description": "Ermöglicht Nutzern von deutschen Tastatur-Layouts den Zugriff auf die Suchleiste in Trello per Bindestrich ('-'). Trello-User, die ein deutsches Tastatur-Layout nutzen, können dieses Tastaturkürzel ohne dieses Addon (also per '/') nicht nutzen.",
+  "author": "Janis Krasemann",
   "license": "MPL 2.0",
   "version": "0.1"
 }
