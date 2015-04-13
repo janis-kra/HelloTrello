@@ -19,3 +19,16 @@ document.onkeypress = function(e) {
     }
     return true;
   };
+
+if (document.getElementsByClassName("shortcut-list")) {
+  var keyboardKeys = document.getElementsByClassName("keyboard-key");
+  for (var i = keyboardKeys.length - 1; i >= 0; i--) {
+    if (keyboardKeys[i].innerHTML === "&lt;") {
+      keyboardKeys[i].innerHTML = ",";
+    } else if (keyboardKeys[i].innerHTML === "&gt;") {
+      keyboardKeys[i].innerHTML = ".";
+    } else if (keyboardKeys[i].innerHTML === "/") {
+      keyboardKeys[i].innerHTML = "-";
+    }
+  };
+}
