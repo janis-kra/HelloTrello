@@ -1,3 +1,15 @@
+var insertHelpText = function(element, text) {
+  var parent = element.parentNode;
+  if (parent) {
+    parent = parent.parentNode;
+    if (parent) {
+      var span = document.createElement("p");
+      span.innerHTML = text;
+      parent.appendChild(span);
+    }
+  }
+};
+
 document.onkeypress = function(e) {
 
     var searchKey = 45; // -
@@ -25,10 +37,12 @@ if (document.getElementsByClassName("shortcut-list")) {
   for (var i = keyboardKeys.length - 1; i >= 0; i--) {
     if (keyboardKeys[i].innerHTML === "&lt;") {
       keyboardKeys[i].innerHTML = ",";
+      insertHelpText(keyboardKeys[i], "HelloTrello Anwender können , beziehungsweise . benutzen.");
     } else if (keyboardKeys[i].innerHTML === "&gt;") {
       keyboardKeys[i].innerHTML = ".";
     } else if (keyboardKeys[i].innerHTML === "/") {
       keyboardKeys[i].innerHTML = "-";
+      insertHelpText(keyboardKeys[i], "HelloTrello Anwender können - benutzen.");
     }
   };
 }
