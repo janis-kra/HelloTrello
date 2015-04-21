@@ -4,7 +4,8 @@ var insertHelpText = function(element, text) {
     parent = parent.parentNode;
     if (parent) {
       var span = document.createElement("p");
-      span.innerHTML = text;
+      var textNode = document.createTextNode(text);
+      span.appendChild(textNode);
       parent.appendChild(span);
     }
   }
